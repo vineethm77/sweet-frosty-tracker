@@ -23,7 +23,7 @@ const products: Product[] = [
     name: "Blueberry Milkshake",
     description:
       "Creamy blueberry shake blended with milk and ice cream",
-    price: 30, // ✅ Numeric only
+    price: 50, // ✅ Numeric only
     calories: 300,
     image: blueberryMilkshake, // ✅ Updated image
   },
