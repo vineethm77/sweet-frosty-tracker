@@ -5,31 +5,34 @@ import ProductCard, { Product } from "@/components/ProductCard";
 import CalorieCounter from "@/components/CalorieCounter";
 import { useToast } from "@/hooks/use-toast";
 import iceCreamSundae from "@/assets/ice-cream-sundae.jpg";
-import chocolateShake from "@/assets/chocolate-shake.jpg";
+import blueberryMilkshake from "@/assets/chocolate-shake.jpg"; // 🆕 New image
 import strawberrySmoothie from "@/assets/strawberry-smoothie.jpg";
 
 const products: Product[] = [
   {
     id: 1,
-    name: "Ice Cream Sundae",
-    description: "Classic vanilla ice cream topped with chocolate syrup, whipped cream, and a cherry",
-    price:25,
+    name: "Glass Pudding",
+    description:
+      "Smooth and chilled pudding served with caramel topping",
+    price: 30,
     calories: 250,
     image: iceCreamSundae,
   },
   {
     id: 2,
-    name: "Chocolate Shake",
-    description: "Rich and creamy chocolate milkshake made with premium cocoa",
-    price:30,
+    name: "Blueberry Milkshake",
+    description:
+      "Creamy blueberry shake blended with milk and ice cream",
+    price: 30, // ✅ Numeric only
     calories: 300,
-    image: chocolateShake,
+    image: blueberryMilkshake, // ✅ Updated image
   },
   {
     id: 3,
-    name: "Strawberry Smoothie",
-    description: "Fresh strawberries blended with yogurt for a refreshing treat",
-    price:20,
+    name: "Fruit Frosty Sandwich",
+    description:
+      "Fresh fruit layers with ice cream in a frosty sandwich",
+    price: 40,
     calories: 180,
     image: strawberrySmoothie,
   },
@@ -50,16 +53,16 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Header cartCount={cart.length} />
-      
+
       <main>
         <Hero />
-        
+
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold font-heading text-center text-foreground mb-12">
               Featured Treats
             </h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {products.map((product) => (
                 <ProductCard
